@@ -77,57 +77,9 @@ The production build will be in the `dist` folder.
 
 
 
-### 1. **Project Overview (2-3 minutes)**
 
-Start with a high-level overview:
-- "I built a Product Management App using Vue 3, demonstrating modern frontend development practices"
-- Mention the tech stack: Vue 3, Pinia, Tailwind CSS, Vite
-- Highlight that it uses a real API (DummyJSON)
 
-### 2. **Live Demo (5-7 minutes)**
-
-**D key features in this order:**
-
-1. **Authentication**
-   - Show the login page design
-   - Login with demo credentials
-   - Explain token-based authentication (accessToken/refreshToken)
-   - Mention session persistence (refresh the page to show it stays logged in)
-
-2. **Product Listing**
-   - Show the responsive grid layout
-   - Demonstrate **search** (type "phone")
-   - Show **category filter** (select "smartphones")
-   - Demonstrate **sorting** (sort by price, descending)
-   - Navigate through **pagination**
-   - Point out the results counter
-
-3. **Product Details**
-   - Click on a product
-   - Show the image gallery (click thumbnails)
-   - Highlight comprehensive product information
-   - Demonstrate delete functionality
-
-4. **Add Product**
-   - Navigate to add product form
-   - Show form validation
-   - Add a sample product
-   - Show success feedback
-
-### 3. **Technical Deep Dive (5-8 minutes)*
-
-#### A. State Management with Pinia
-```javascript
-- Centralized state management
-- Reactive getters for computed values
-- Async actions for API calls
-- Clean separation of concerns
-```
-
-**Key Points:**
-- "I used Pinia for state management because it's the official Vue 3 store"
-- "Implemented separate stores for auth and products"
-- "Used getters for computed values like pagination and filtering"
+#
 
 #### B. Server-Side Features
 ```javascript

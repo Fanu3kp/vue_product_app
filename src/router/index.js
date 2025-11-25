@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router'; 
 import { useAuthStore } from '../stores/auth';
 
 // Lazy-loaded components
@@ -16,23 +16,24 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes
-})
+  history: createWebHashHistory('/vue_product_app/'),  // 👈 FIXED
+  routes
+});
+
 // Navigation guards for authentication
 router.beforeEach((to, from, next) => {
   const authStore = useAuthStore();
   authStore.restoreSession(); // restore session on page refresh
 
   if (to.meta.requiresAuth && !authStore.isAuthenticated) {
-    return next('/login'); // redirect to login if not authenticated
+    return next('/login');
   }
 
   if (to.meta.requiresGuest && authStore.isAuthenticated) {
-    return next('/products'); // redirect to products if already logged in
+    return next('/products');
   }
 
-  next(); // allow navigation
+  next();
 });
 
 export default router;
