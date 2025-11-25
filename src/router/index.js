@@ -16,10 +16,9 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes
-});
-
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes
+})
 // Navigation guards for authentication
 router.beforeEach((to, from, next) => {
   const authStore = useAuthStore();
